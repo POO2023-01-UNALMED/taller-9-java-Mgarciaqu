@@ -5,21 +5,19 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Calculadora extends Application  {
-	
-	public static void main(String args[]){ 
-	      ***(args); 
-	} 
-	
-	@Override
-	public void start(Stage window) throws Exception {
-		*** vb = new VBox();
-		window.setTitle(***);
-		
-		vb.getChildren().add(new Calculator());
-		Scene sc = new Scene(***, 270, 270);
-		window.setScene(***);
-		***.show();
+public class Calculadora extends Application {
+
+	public static void main(String[] args) {
+		launch(args);
 	}
-	
+
+	@Override
+	public void start(Stage primaryStage) {
+		VBox vbox = new VBox();
+		vbox.getChildren().add(new Calculator());
+		Scene scene = new Scene(vbox, 270, 270);
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Calculadora");
+		primaryStage.show();
+	}
 }
